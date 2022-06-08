@@ -26,7 +26,7 @@ const callDHLExpressRating = async (payload: any) => {
         unitOfMeasurement: 'metric',
       },
     })
-  } catch (error) {
+  } catch (error: any) {
     delete error.config.auth
     return { data: { error } }
   }
