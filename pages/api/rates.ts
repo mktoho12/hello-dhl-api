@@ -27,6 +27,7 @@ const callDHLExpressRating = async (payload: any) => {
       },
     })
   } catch (error) {
+    delete error.config.auth
     return { data: { error } }
   }
 }
